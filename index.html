@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Adamou Hassane Boubacar</title>
+    <meta name="description" content="Portfolio professionnel — Adamou Hassane Boubacar. Projets, À propos et contact." />
+    <!-- Tailwind Play CDN (rapide pour prototype) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            },
+            colors: {
+              // brand color used with arbitrary classes if needed
+              brand: '#06b6d4'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* petites personnalisations */
+      :root { --accent: #06b6d4; }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-slate-50 via-white to-cyan-50 text-slate-800 leading-relaxed antialiased font-sans">
+    <header class="sticky top-0 bg-white/70 backdrop-blur z-30">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#home" class="font-semibold text-lg">Adamou Hassane Boubacar</a>
+        <nav class="hidden md:flex gap-6 items-center text-slate-700">
+          <a href="#about" class="hover:text-cyan-600 transition">À propos</a>
+          <a href="#projects" class="hover:text-cyan-600 transition">Projets</a>
+          <a href="#hobbies" class="hover:text-cyan-600 transition">Loisirs</a>
+          <a href="#contact" class="hover:text-cyan-600 transition">Contact</a>
+          <a href="#" class="inline-block bg-gradient-to-r from-teal-400 to-cyan-400 text-white px-4 py-2 rounded-md">CV</a>
+        </nav>
+        <button id="navToggle" class="md:hidden p-2 rounded-md ring-1 ring-slate-200">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobileNav" class="md:hidden hidden px-6 pb-4 space-y-2">
+        <a href="#about" class="block py-2 hover:text-cyan-600">À propos</a>
+        <a href="#projects" class="block py-2 hover:text-cyan-600">Projets</a>
+        <a href="#hobbies" class="block py-2 hover:text-cyan-600">Loisirs</a>
+        <a href="#contact" class="block py-2 hover:text-cyan-600">Contact</a>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12" id="home">
+      <!-- Hero -->
+      <section class="grid gap-8 md:grid-cols-2 items-center">
+        <div>
+          <p class="text-sm text-slate-500">Salut, je suis</p>
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="Photo télécommunications" class="w-28 h-28 rounded-full object-cover mb-4 shadow-md border-4 border-cyan-400">
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Adamou Hassane Boubacar — Étudiant en Télécommunications & Réseaux</h1>
+          <p class="mt-4 text-slate-600">Actuellement étudiant en télécommunications et réseaux informatiques. Mes connaissances techniques, associées à ma conscience professionnelle et ma polyvalence, me préparent à contribuer efficacement aux projets d'équipe.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#projects" class="bg-[#08132a] hover:bg-[#061027] text-white px-4 py-2 rounded-md transition">Voir mes projets</a>
+            <a href="#contact" class="border border-[var(--accent)] text-[var(--accent)] px-4 py-2 rounded-md transition">Me contacter</a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=900&q=80" alt="Illustration réseaux informatiques" class="rounded-xl shadow-lg object-cover w-full h-full border-4 border-cyan-200" />
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="mt-16">
+        <h2 class="text-2xl font-bold">À propos</h2>
+        <p class="mt-4 text-slate-600">Actuellement étudiant en télécommunications et réseaux informatiques. Mes connaissances techniques, associées à ma conscience professionnelle et ma polyvalence, me préparent à contribuer efficacement aux projets des équipes.</p>
+        <div class="mt-6 grid md:grid-cols-2 gap-4">
+          <div class="bg-slate-50 p-4 rounded-lg shadow-sm">
+            <h3 class="font-semibold">Compétences</h3>
+            <ul class="mt-2 text-slate-600 list-disc list-inside">
+              <li>Simulation réseau (VMware Workstation)</li>
+              <li>Installation & configuration de systèmes d'exploitation</li>
+              <li>Configuration d'équipements réseau (routeurs, switches)</li>
+            </ul>
+          </div>
+          <div class="bg-slate-50 p-4 rounded-lg shadow-sm">
+            <h3 class="font-semibold">Process</h3>
+            <p class="mt-2 text-slate-600">Analyse des besoins, conception du réseau, déploiement de VM, tests et documentation opérationnelle.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="mt-16">
+        <h2 class="text-2xl font-bold">Projets</h2>
+        <p class="mt-2 text-slate-600">Quelques projets récents — descriptions courtes et liens.</p>
+        <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Project Card 1 (principal) -->
+          <article class="p-4 border rounded-lg hover:shadow-lg transition-transform transform hover:-translate-y-1 hover:shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Simulation réseau - Niger Telecoms" class="h-40 w-full object-cover rounded-md border-2 border-cyan-300" />
+            <h3 class="mt-3 font-semibold">Simulation réseau — Niger Telecoms</h3>
+            <p class="text-sm text-slate-600 mt-1">Simulation d'un réseau d'entreprise avec VMware Workstation : installation et configuration du réseau, des systèmes d'exploitation, des logiciels et des équipements informatiques pour Niger Telecoms.</p>
+            <div class="mt-3 flex gap-2">
+              <a class="text-sm text-[var(--accent)] hover:underline" href="#">Rapport</a>
+              <a class="text-sm text-[var(--accent)] hover:underline" href="#">Détails</a>
+            </div>
+          </article>
+          <!-- Project Card 2 -->
+          <article class="p-4 border rounded-lg hover:shadow-lg transition-transform transform hover:-translate-y-1 hover:shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Installation systèmes informatiques" class="h-40 w-full object-cover rounded-md border-2 border-cyan-300" />
+            <h3 class="mt-3 font-semibold">Installation & Configuration</h3>
+            <p class="text-sm text-slate-600 mt-1">Déploiement de systèmes d'exploitation et configuration logicielle pour postes et serveurs, gestion des images et automatisation basique.</p>
+            <div class="mt-3 flex gap-2">
+              <a class="text-sm text-[var(--accent)] hover:underline" href="#">Détails</a>
+            </div>
+          </article>
+          <!-- Project Card 3 -->
+          <article class="p-4 border rounded-lg hover:shadow-lg transition-transform transform hover:-translate-y-1 hover:shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Configuration équipements réseau" class="h-40 w-full object-cover rounded-md border-2 border-cyan-300" />
+            <h3 class="mt-3 font-semibold">Configuration équipements réseau</h3>
+            <p class="text-sm text-slate-600 mt-1">Configuration de routeurs et switches, mise en place de VLANs et tests de connectivité.</p>
+            <div class="mt-3 flex gap-2">
+              <a class="text-sm text-[var(--accent)] hover:underline" href="#">Détails</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Loisirs & Passions -->
+      <section id="hobbies" class="mt-16">
+        <h2 class="text-2xl font-bold">Loisirs & Passions</h2>
+        <p class="mt-2 text-slate-600">En dehors de mes études et de mes projets techniques, je suis passionné par :</p>
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <!-- Lecture -->
+          <div class="p-6 bg-white border border-cyan-200 rounded-lg shadow-sm hover:shadow-lg transition-transform transform hover:-translate-y-1">
+            <div class="text-4xl mb-3">📚</div>
+            <h3 class="font-semibold text-lg">Lecture</h3>
+            <p class="mt-2 text-slate-600">J'aime lire des livres sur les technologies, les réseaux informatiques et les sciences. Les histoires de développement personnel m'inspirent.</p>
+          </div>
+          <!-- Natation -->
+          <div class="p-6 bg-white border border-cyan-200 rounded-lg shadow-sm hover:shadow-lg transition-transform transform hover:-translate-y-1">
+            <div class="text-4xl mb-3">🏊</div>
+            <h3 class="font-semibold text-lg">Natation</h3>
+            <p class="mt-2 text-slate-600">La natation me permet de rester en forme et de maintenir une bonne équilibre entre travail et loisir. C'est ma passion pour le bien-être.</p>
+          </div>
+          <!-- Voyage -->
+          <div class="p-6 bg-white border border-cyan-200 rounded-lg shadow-sm hover:shadow-lg transition-transform transform hover:-translate-y-1">
+            <div class="text-4xl mb-3">✈️</div>
+            <h3 class="font-semibold text-lg">Voyage</h3>
+            <p class="mt-2 text-slate-600">J'adore découvrir de nouvelles cultures et explorer différents pays. Les voyages enrichissent ma perspective et ma compréhension du monde.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="mt-16">
+        <h2 class="text-2xl font-bold">Contact</h2>
+        <p class="mt-2 text-slate-600">Tu peux me contacter via email ou via les liens ci-dessous.</p>
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <form action="mailto:boubacar67op@gmail.com" method="post" encType="text/plain" class="space-y-4">
+            <div>
+              <label class="block text-sm">Nom</label>
+              <input class="mt-1 w-full border rounded-md px-3 py-2" type="text" name="name" />
+            </div>
+            <div>
+              <label class="block text-sm">Email</label>
+              <input class="mt-1 w-full border rounded-md px-3 py-2" type="email" name="email" />
+            </div>
+            <div>
+              <label class="block text-sm">Message</label>
+              <textarea class="mt-1 w-full border rounded-md px-3 py-2" name="message" rows="4"></textarea>
+            </div>
+            <div>
+              <button class="bg-slate-900 text-white px-4 py-2 rounded-md">Envoyer</button>
+            </div>
+          </form>
+          <div class="flex flex-col gap-4">
+            <div class="bg-slate-50 p-4 rounded-lg">
+              <h3 class="font-semibold">Réseaux</h3>
+              <p class="mt-2 text-slate-600">LinkedIn · GitHub · Twitter</p>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-lg">
+              <h3 class="font-semibold">Télécharger CV</h3>
+              <p class="mt-2 text-slate-600">Télécharge mon CV en PDF.</p>
+              <a href="assets/Boubacar_CV.pdf" download class="mt-3 inline-block text-[var(--accent)]">Télécharger le CV (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t mt-16">
+      <div class="max-w-5xl mx-auto px-6 py-6 text-sm text-slate-600">© 2025 Adamou Hassane Boubacar — Tous droits réservés.</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
